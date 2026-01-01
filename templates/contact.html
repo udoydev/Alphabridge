@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - Alphabridge{% endblock title %}
+
+{% block content %}
+<div class="py-5">
+  <h1 class="mb-4">Contact Us</h1>
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="card bg-light shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Get in Touch</h5>
+          <p class="card-text">
+            <strong>Email:</strong> <a href="mailto:info@alphabridge.com">info@alphabridge.com</a>
+          </p>
+          <p class="card-text">
+            <strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a>
+          </p>
+          <p class="card-text">
+            <strong>Address:</strong><br>
+            123 Business Street<br>
+            City, State 12345
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

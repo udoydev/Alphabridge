@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services - Alphabridge{% endblock title %}
+
+{% block content %}
+<div class="py-5">
+  <div class="text-center mb-5">
+    <h1 class="mb-2 fw-bold" style="color: #2c3e50;">Our Services</h1>
+    <p class="text-muted" style="font-size: 1.1rem;">Explore our comprehensive range of professional services</p>
+    <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #3498db, #2ecc71); margin: 1rem auto;"></div>
+  </div>
+  
+  <div class="row g-4 services">
+
+    <!-- Service 1: Business Strategy -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-6">
+      <div class="card h-100 shadow-sm border-0 hover-card">
+        <div class="card-body">
+          <i class="fas fa-chess text-primary" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title mt-3">Business Strategy & Digital Transformation</h5>
+          <p class="card-text text-muted">
+            Strategic planning, market expansion, efficiency programs, and digital transformation roadmaps.
+          </p>
+          <a href="{% url 'service-detail' service_type='business-strategy' %}" class="btn btn-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 2: AI & Data -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-6">
+      <div class="card h-100 shadow-sm border-0 hover-card">
+        <div class="card-body">
+          <i class="fas fa-brain text-success" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title mt-3">AI & Data-Driven Business Growth</h5>
+          <p class="card-text text-muted">
+            AI readiness, predictive analytics, generative AI copilots, and data modernization.
+          </p>
+          <a href="{% url 'service-detail' service_type='ai-data' %}" class="btn btn-success btn-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 3: Business Analysis -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-6">
+      <div class="card h-100 shadow-sm border-0 hover-card">
+        <div class="card-body">
+          <i class="fas fa-chart-line text-info" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title mt-3">Business Analysis & Startup Development</h5>
+          <p class="card-text text-muted">
+            MVP development, product-market fit, financial modeling, and fundraising strategy.
+          </p>
+          <a href="{% url 'service-detail' service_type='business-analysis' %}" class="btn btn-info btn-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 4: IT & Cyber -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-6">
+      <div class="card h-100 shadow-sm border-0 hover-card">
+        <div class="card-body">
+          <i class="fas fa-lock text-warning" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title mt-3">IT & Cyber Resilience</h5>
+          <p class="card-text text-muted">
+            Cloud infrastructure, custom software, security audits, compliance automation, and disaster recovery.
+          </p>
+          <a href="{% url 'service-detail' service_type='it-cyber' %}" class="btn btn-warning btn-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 5: Marketing & Growth -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-6">
+      <div class="card h-100 shadow-sm border-0 hover-card">
+        <div class="card-body">
+          <i class="fas fa-rocket text-danger" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title mt-3">Marketing & Growth Engineering</h5>
+          <p class="card-text text-muted">
+            Brand strategy, content creation, SEO/SEM, growth hacking, and community-led growth.
+          </p>
+          <a href="{% url 'service-detail' service_type='marketing-growth' %}" class="btn btn-danger btn-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+</style>
+
+{% endblock content %}

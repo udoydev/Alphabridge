@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ service_title }} - Alphabridge{% endblock title %}
+
+{% block content %}
+<div class="py-5">
+  <div class="mb-4">
+    <a href="{% url 'service' %}" class="btn btn-outline-secondary btn-sm">
+      <i class="fas fa-arrow-left"></i> Back to Services
+    </a>
+  </div>
+  
+  <div class="mb-5">
+    <h1 class="mb-3 fw-bold" style="color: #2c3e50;">{{ service_title }}</h1>
+    <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #3498db, #2ecc71);"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="service-details">
+        {% for item in service_items %}
+        <div class="mb-4 p-4 border-start border-4" style="border-color: #3498db; background-color: #f8f9fa;">
+          <h5 class="fw-bold" style="color: #2c3e50;">
+            <i class="fas fa-check-circle text-success me-2"></i>{{ item }}
+          </h5>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card shadow-sm sticky-top" style="top: 20px;">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Ready to Get Started?</h5>
+          <p class="card-text text-muted small">
+            Let's discuss how our services can transform your business.
+          </p>
+          <a href="{% url 'contact' %}" class="btn btn-primary w-100">Contact Us Today</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

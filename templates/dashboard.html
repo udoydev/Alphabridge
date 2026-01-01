@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Alphabridge{% endblock title %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="py-5" style="background: linear-gradient(135deg, rgba(44, 62, 80, 0.1) 0%, rgba(52, 73, 94, 0.1) 100%);">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-3" style="color: #2c3e50;">Transform Your Business</h1>
+        <p class="lead text-muted mb-4">
+          We provide comprehensive consulting, AI-driven solutions, and digital transformation services to help your business thrive in the modern economy.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="{% url 'service' %}" class="btn btn-primary btn-lg">Explore Services</a>
+          <a href="{% url 'contact' %}" class="btn btn-outline-primary btn-lg">Get in Touch</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center">
+          <i class="fas fa-chart-line" style="font-size: 8rem; color: #3498db; opacity: 0.7;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services Slider Section -->
+<div class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold mb-2" style="color: #2c3e50;">Our Services</h2>
+      <p class="text-muted">Discover what we offer</p>
+      <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #3498db, #2ecc71); margin: 1rem auto;"></div>
+    </div>
+
+    <!-- Carousel/Slider -->
+    <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm border-0 hover-card">
+                <div class="card-body">
+                  <i class="fas fa-chess text-primary" style="font-size: 2.5rem;"></i>
+                  <h5 class="card-title mt-3">Business Strategy & Digital Transformation</h5>
+                  <p class="card-text text-muted">Strategic planning, market expansion, and digital transformation roadmaps.</p>
+                  <a href="{% url 'service-detail' service_type='business-strategy' %}" class="btn btn-primary btn-sm">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm border-0 hover-card">
+                <div class="card-body">
+                  <i class="fas fa-brain text-success" style="font-size: 2.5rem;"></i>
+                  <h5 class="card-title mt-3">AI & Data-Driven Business Growth</h5>
+                  <p class="card-text text-muted">AI readiness, predictive analytics, and generative AI solutions.</p>
+                  <a href="{% url 'service-detail' service_type='ai-data' %}" class="btn btn-success btn-sm">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm border-0 hover-card">
+                <div class="card-body">
+                  <i class="fas fa-chart-line text-info" style="font-size: 2.5rem;"></i>
+                  <h5 class="card-title mt-3">Business Analysis & Startup Development</h5>
+                  <p class="card-text text-muted">MVP development, product-market fit, and fundraising strategy.</p>
+                  <a href="{% url 'service-detail' service_type='business-analysis' %}" class="btn btn-info btn-sm">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm border-0 hover-card">
+                <div class="card-body">
+                  <i class="fas fa-lock text-warning" style="font-size: 2.5rem;"></i>
+                  <h5 class="card-title mt-3">IT & Cyber Resilience</h5>
+                  <p class="card-text text-muted">Cloud infrastructure, security audits, and compliance automation.</p>
+                  <a href="{% url 'service-detail' service_type='it-cyber' %}" class="btn btn-warning btn-sm">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm border-0 hover-card">
+                <div class="card-body">
+                  <i class="fas fa-rocket text-danger" style="font-size: 2.5rem;"></i>
+                  <h5 class="card-title mt-3">Marketing & Growth Engineering</h5>
+                  <p class="card-text text-muted">Brand strategy, growth hacking, and community-led growth.</p>
+                  <a href="{% url 'service-detail' service_type='marketing-growth' %}" class="btn btn-danger btn-sm">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center">
+                  <p class="text-muted">Explore all our services and find the perfect solution for your business needs.</p>
+                  <a href="{% url 'service' %}" class="btn btn-primary">View All Services</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="py-5" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Ready to Transform Your Business?</h2>
+    <p class="lead mb-4">
+      Let's discuss how our services can drive growth and innovation for your organization.
+    </p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Contact Us Today</a>
+  </div>
+</div>
+
+<style>
+  .hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+  .text-sm {
+    font-size: 0.95rem;
+  }
+</style>
+
+{% endblock content %}

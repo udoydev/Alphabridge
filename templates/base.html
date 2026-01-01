@@ -1,0 +1,38 @@
+{% load static %}
+{% load bootstrap5 %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base.css'%}">
+
+
+
+  <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar -->
+  {% include 'reuse/nav.html' %}
+
+  <main class="container flex-grow-1">
+    {% block content %}{% endblock content %}
+  </main>
+
+  <!-- Footer -->
+  {% include 'reuse/foot.html' %}
+
+  <!-- Bootstrap JS -->
+  {% bootstrap_javascript %}
+
+</body>
+</html>

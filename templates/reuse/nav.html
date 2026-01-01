@@ -1,0 +1,31 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark shadow-lg" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);">
+  <div class="container-xl">
+    <!-- Brand -->
+    <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-decoration-none">
+      <img src="{% static 'img/logo_alpha.jpeg' %}" alt="Alphabridge Logo" style="height: 50px; width: auto;">
+      <span class="ms-2 fw-bold fs-4 text-white">Alphabridge</span>
+    </a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto d-flex gap-2">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'service' %}">Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
