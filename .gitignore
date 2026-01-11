@@ -100,3 +100,4 @@ temp/
 
 # OS specific
 .env.*.swp
+.vercel

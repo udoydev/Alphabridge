@@ -4,13 +4,8 @@ env
 __pycache__
 *.pyc
 .git
-.gitignore
 .env
-.env.local
-.env.*.local
-node_modules
-.pytest_cache
 *.sqlite3
 db.sqlite3
-.DS_Store
 staticfiles_build
+*.log

@@ -1,6 +1,5 @@
 Django==4.2.8
 gunicorn==21.2.0
-python-decouple==3.8
 whitenoise==6.6.0
 Pillow==11.0.0
 django-bootstrap5==23.4
